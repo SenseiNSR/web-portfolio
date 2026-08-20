@@ -80,7 +80,7 @@ heroTimeline.from('.hero-intro', {
     duration: 0.8,
     ease: 'power3.out'
 }, '-=0.5')
-.from('.contact-btn', {
+.from('.hero .contact-btn', {
     y: 20,
     opacity: 0,
     duration: 0.8,

@@ -277,25 +277,30 @@ ul {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 40px;
-    align-items: stretch; /* Fix displaced layout */
 }
 
 .skill-card {
     background: var(--card-bg);
     border-radius: 10px;
-    padding: 25px 15px;
+    padding: 35px 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    transition: transform 0.3s, background-color 0.3s;
-    height: 100%;
+    transition: background-color 0.3s;
 }
 
 .skill-card:hover {
     background-color: #4a4d53; /* Light gray hover color */
+}
+
+.skill-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.skill-card p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
 }
 
 .skill-card.active {

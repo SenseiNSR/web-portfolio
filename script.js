@@ -132,7 +132,8 @@ gsap.from('.skill-card', {
     opacity: 0,
     duration: 0.6,
     stagger: 0.1,
-    ease: 'power2.out'
+    ease: 'power2.out',
+    onComplete: () => gsap.set('.skill-card', {clearProps: "transform"})
 });
 
 // Portfolio Section

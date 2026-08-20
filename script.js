@@ -230,3 +230,35 @@ if (viewMoreBtn && projectDetails) {
         }
     });
 }
+
+// Contact Form Handlers
+function getFormData() {
+    const name = document.getElementById('senderName').value.trim();
+    const email = document.getElementById('senderEmail').value.trim();
+    const message = document.getElementById('senderMessage').value.trim();
+    
+    if(!name || !email || !message) {
+        alert('Please fill all the fields before sending.');
+        return null;
+    }
+    return { name, email, message };
+}
+
+function sendWhatsApp() {
+    const data = getFormData();
+    if(!data) return;
+    
+    const text = encodeURIComponent(Hi Nahar!\n\nName: \nEmail: \n\nMessage:\n);
+    const url = https://wa.me/918269016285?text=;
+    window.open(url, '_blank');
+}
+
+function sendEmail() {
+    const data = getFormData();
+    if(!data) return;
+    
+    const subject = encodeURIComponent(Portfolio Contact from );
+    const body = encodeURIComponent(Hi Nahar,\n\nName: \nEmail: \n\nMessage:\n);
+    const url = mailto:naharsinghranas@gmail.com?subject=&body=;
+    window.location.href = url;
+}

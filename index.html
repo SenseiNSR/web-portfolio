@@ -276,11 +276,18 @@
                         </div>
                     </div>
                     
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message feature coming soon!');">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="btn fill-btn">Send Message</button>
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" id="senderName" placeholder="Your Name" required>
+                        <input type="email" id="senderEmail" placeholder="Your Email" required>
+                        <textarea id="senderMessage" placeholder="Your Message" rows="5" required></textarea>
+                        <div style="display: flex; gap: 15px; margin-top: 5px;">
+                            <button type="button" class="btn fill-btn" onclick="sendWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
+                            <button type="button" class="btn contact-btn" onclick="sendEmail()">
+                                <i class="fas fa-envelope"></i> Email
+                            </button>
+                        </div>
                     </form>
                 </div>
             </section>

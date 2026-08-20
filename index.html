@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahar Singh Rana | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts: Playfair Display for headings, Roboto for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="portfolio-container">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="logo">
+                    <!-- Abstract logo shape -->
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L22 7L12 12L2 7L12 2Z" fill="var(--accent-color)"/>
+                            <path d="M2 17L12 22L22 17" stroke="var(--accent-color)" stroke-width="2"/>
+                            <path d="M2 12L12 17L22 12" stroke="var(--accent-color)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <header class="hero">
+                <div class="hero-content">
+                    <p class="hero-intro">I'M <span class="hero-name">Nahar Singh Rana</span></p>
+                    <h2 class="hero-role">Computer Science Student &<br>AI-ML Enthusiast</h2>
+                    <a href="nsr_resume_updated.docx" class="btn contact-btn" download>Download Resume</a>
+                </div>
+                
+                <div class="hero-image-placeholder">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/nahar-singh-rana-985026342" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:naharsinghranas@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/SenseiNSR" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </header>
+
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="about-line"></div>
+                    <p>
+                        Result-driven Computer Science and Engineering (B. Tech) student with hands-on experience in software development, full-stack web development, and applied machine learning. Proficient in Python, Java, JavaScript, and React.js, with project experience spanning computer vision, data analysis, and database-driven applications. Strong foundation in data structures, algorithms, and problem-solving, seeking a Software Engineering / AI-ML internship to build scalable, real-world solutions in a fast-paced team environment.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section skills-section">
+                <h2 class="section-title center">My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-python skill-icon" style="color: #3776AB;"></i>
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-java skill-icon" style="color: #f89820;"></i>
+                        <p>Java</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-brain skill-icon" style="color: #fff;"></i>
+                        <p>AI / ML</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-react skill-icon" style="color: #61DAFB;"></i>
+                        <p>React.js</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <i class="fas fa-eye skill-icon" style="color: #7A7A7A;"></i>
+                        <p>OpenCV & CV</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon" style="color: #47A248;"></i>
+                        <p>MongoDB / SQL</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon" style="color: #E34F26;"></i>
+                        <p>HTML & CSS</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js skill-icon" style="color: #F7DF1E;"></i>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                
+                <div class="dots-decorator">
+                    <div class="dot-grid"></div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section (Projects) -->
+            <section id="portfolio" class="section portfolio-section">
+                <div class="portfolio-grid">
+                    <a href="#" class="portfolio-item">
+                        <div class="portfolio-img bg-1">
+                            <i class="fas fa-sign-language"></i>
+                        </div>
+                        <div class="portfolio-info">GESTUREX (Sign Language ML)</div>
+                    </a>
+                    <a href="https://github.com/SenseiNSR/Library_Management-MPOnline" target="_blank" class="portfolio-item">
+                        <div class="portfolio-img bg-2">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="portfolio-info">Library Management</div>
+                    </a>
+                    <a href="https://github.com/SenseiNSR/smart_retail" target="_blank" class="portfolio-item">
+                        <div class="portfolio-img bg-3">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="portfolio-info">Smart Retail AI</div>
+                    </a>
+                    <a href="#" class="portfolio-item">
+                        <div class="portfolio-img bg-4">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="portfolio-info">IT & Networking</div>
+                    </a>
+                </div>
+                <div class="center" style="margin-top: 30px;">
+                    <button id="view-more-btn" class="btn fill-btn">View More</button>
+                </div>
+                
+                <!-- Hidden Project Details -->
+                <div id="project-details" class="project-details hidden">
+                    <div class="project-detail-card">
+                        <h3>1. GESTUREX - Real-time Sign Language Detection System</h3>
+                        <p>Developed a real-time system to bridge communication gaps for hearing and speech impaired individuals. Used Python, OpenCV, and PyTorch to translate sign language gestures into text or speech. Implemented dynamic hand gesture recognition with high accuracy and low latency. Enhanced accessibility and inclusive communication through innovative technology.</p>
+                    </div>
+                    <div class="project-detail-card">
+                        <h3>2. Library Management System</h3>
+                        <p>Developed a web-based Library Management System using ASP.NET Core MVC and Microsoft SQL Server. Implemented book catalogue, student/librarian records, borrowing/returns, and publication management. Designed a responsive admin dashboard with authentication, search, statistics, quick actions, and dark mode. Centralized records to reduce paperwork and enable secure, efficient resource tracking.</p>
+                    </div>
+                    <div class="project-detail-card">
+                        <h3>3. Smart Retail</h3>
+                        <p>Completed an AI/ML Internship in Smart Retail, gaining hands-on experience in Python, data preprocessing, EDA, and feature engineering. Built and evaluated ML models using Regression, Classification, Decision Trees, Random Forest, SVM, and hyperparameter tuning. Worked with Clustering, PCA, Neural Networks, TensorFlow/PyTorch, Computer Vision, and Natural Language Processing. Developed and deployed ML pipelines using Flask/FastAPI, with Git/GitHub, model versioning, and capstone project experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education / Experience Section -->
+            <section class="section experience-section">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2027</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>VIT Bhopal</h3>
+                            <p class="timeline-subtitle">B. Tech in Computer Science and Engineering</p>
+                            <p class="timeline-text">
+                                Expected Graduation: 2027. Building a strong foundation in data structures, algorithms, and problem-solving. Proficient in multiple programming languages and web technologies.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>DPS Rairu</h3>
+                            <p class="timeline-subtitle">Higher Secondary School (Class-12)</p>
+                            <p class="timeline-text">
+                                Completed Higher Secondary Education with a focus on science and mathematics, laying the groundwork for a career in engineering and technology.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>DPS Rairu</h3>
+                            <p class="timeline-subtitle">Lower Secondary School (Class-10)</p>
+                            <p class="timeline-text">
+                                Completed Lower Secondary Education, developing a strong core in academics and foundational subjects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial (Certifications) -->
+            <section class="section testimonial-section">
+                <div class="dots-decorator left-dots">
+                    <div class="dot-grid small"></div>
+                </div>
+                <h2 class="section-title">Certifications</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial-content">
+                        
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <div class="about-line"></div>
+                                <h4>1. The Bits and Bytes of Computer Networking <a href="https://www.coursera.org/account/accomplishments/records/3U4SD3WAN1LU" target="_blank"><i class="fas fa-external-link-alt"></i></a></h4>
+                                <p class="quote">Completed the Networking course under the IT Support Professional Certificate. Gained knowledge of TCP/IP, OSI models, network layers, and communication fundamentals.</p>
+                            </div>
+                            
+                            <div class="cert-item">
+                                <div class="about-line"></div>
+                                <h4>2. Programming in Java</h4>
+                                <p class="quote">Successfully completed the Comprehensive Java Programming certification, covering core Java and OOP concepts. Developed proficiency in exception handling, file I/O, Collections Framework, multithreading, and Stream API.</p>
+                            </div>
+                            
+                            <div class="cert-item">
+                                <div class="about-line"></div>
+                                <h4>3. Python Essentials</h4>
+                                <p class="quote">Successfully completed the Python Essentials certification from Vityarthi. Gained proficiency in Python fundamentals, data types, control flow, functions, data structures, and OOP.</p>
+                            </div>
+
+                            <div class="cert-item">
+                                <div class="about-line"></div>
+                                <h4>4. Google IT Support <a href="https://www.credly.com/badges/9366a8f5-646c-48aa-bb1f-978a7176886a/public_url" target="_blank"><i class="fas fa-external-link-alt"></i></a></h4>
+                                <p class="quote">Gained knowledge of IT support, troubleshooting, networking, operating systems, system administration, cybersecurity, and technical support. Strengthened problem-solving skills by diagnosing technical issues.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="testimonial-image cert-image">
+                        <div class="image-bg-blob"></div>
+                        <i class="fas fa-certificate large-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section">
+                <h2 class="section-title center">Contact Me</h2>
+                
+                <div class="contact-info-boxes">
+                    <div class="contact-box">
+                        <i class="fas fa-envelope"></i>
+                        <span>naharsinghranas@gmail.com</span>
+                    </div>
+                    <div class="contact-box">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8269016285</span>
+                    </div>
+                </div>
+                <div class="contact-box center-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bhopal, Madhya Pradesh, India</span>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/nahar-singh-rana-985026342" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/SenseiNSR" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

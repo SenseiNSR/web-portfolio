@@ -248,8 +248,8 @@ function sendWhatsApp() {
     const data = getFormData();
     if(!data) return;
     
-    const text = encodeURIComponent(Hi Nahar!\n\nName: \nEmail: \n\nMessage:\n);
-    const url = https://wa.me/918269016285?text=;
+    const text = encodeURIComponent(`Hi Nahar!\n\nName: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`);
+    const url = `https://wa.me/918269016285?text=${text}`;
     window.open(url, '_blank');
 }
 
@@ -257,8 +257,8 @@ function sendEmail() {
     const data = getFormData();
     if(!data) return;
     
-    const subject = encodeURIComponent(Portfolio Contact from );
-    const body = encodeURIComponent(Hi Nahar,\n\nName: \nEmail: \n\nMessage:\n);
-    const url = mailto:naharsinghranas@gmail.com?subject=&body=;
+    const subject = encodeURIComponent(`Portfolio Contact from ${data.name}`);
+    const body = encodeURIComponent(`Hi Nahar,\n\nName: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`);
+    const url = `mailto:naharsinghranas@gmail.com?subject=${subject}&body=${body}`;
     window.location.href = url;
 }

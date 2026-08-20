@@ -254,26 +254,34 @@
             <section id="contact" class="section contact-section">
                 <h2 class="section-title center">Contact Me</h2>
                 
-                <div class="contact-info-boxes">
-                    <div class="contact-box">
-                        <i class="fas fa-envelope"></i>
-                        <span>naharsinghranas@gmail.com</span>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-box">
+                            <i class="fas fa-envelope"></i>
+                            <span>naharsinghranas@gmail.com</span>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8269016285</span>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bhopal, Madhya Pradesh, India</span>
+                        </div>
+                        <div class="footer-socials left-align">
+                            <a href="https://www.linkedin.com/in/nahar-singh-rana-985026342" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/SenseiNSR" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </div>
-                    <div class="contact-box">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 8269016285</span>
-                    </div>
-                </div>
-                <div class="contact-box center-box">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Bhopal, Madhya Pradesh, India</span>
-                </div>
-
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/nahar-singh-rana-985026342" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/SenseiNSR" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message feature coming soon!');">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn fill-btn">Send Message</button>
+                    </form>
                 </div>
             </section>
         </div>

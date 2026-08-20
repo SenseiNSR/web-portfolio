@@ -537,17 +537,24 @@ ul {
     color: var(--text-secondary);
 }
 
-/* Contact Section */
+/* Contact Section Form layout */
 .contact-section {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 40px;
 }
 
-.contact-info-boxes {
+.contact-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin-top: 40px;
+    align-items: stretch;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact-box {
@@ -565,16 +572,44 @@ ul {
     color: var(--text-primary);
 }
 
-.center-box {
-    width: max-content;
-    margin: 20px auto 0 auto;
+.contact-form {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-family: inherit;
+    resize: vertical;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    border: none;
 }
 
 .footer-socials {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+.footer-socials.left-align {
+    justify-content: flex-start;
+    margin-top: 10px;
 }
 
 .footer-socials a {
@@ -586,15 +621,6 @@ ul {
     color: var(--accent-color);
 }
 
-.footer-thanks {
-    text-align: center;
-    margin-top: 30px;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    color: var(--accent-color);
-    font-size: 18px;
-}
-
 /* Responsive Overrides */
 @media (max-width: 768px) {
     .portfolio-container { padding: 0 20px; }
@@ -603,5 +629,6 @@ ul {
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .portfolio-grid { grid-template-columns: 1fr; }
     .testimonial-container { flex-direction: column; gap: 30px; }
+    .contact-container { flex-direction: column; gap: 30px; }
     .hero-image-placeholder { display: none; }
 }

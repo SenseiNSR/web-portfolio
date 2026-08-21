@@ -119,19 +119,19 @@
             <section id="portfolio" class="section portfolio-section">
                 <h2 class="section-title center">Portfolio</h2>
                 <div class="portfolio-grid">
-                    <a href="#" class="portfolio-item">
+                    <a href="#" class="portfolio-item" onclick="openModal('gesturex', event)">
                         <div class="portfolio-img bg-1">
                             <i class="fas fa-sign-language"></i>
                         </div>
                         <div class="portfolio-info">GESTUREX (Sign Language ML)</div>
                     </a>
-                    <a href="https://github.com/SenseiNSR/Library_Management-MPOnline" target="_blank" class="portfolio-item">
+                    <a href="#" class="portfolio-item" onclick="openModal('library', event)">
                         <div class="portfolio-img bg-2">
                             <i class="fas fa-book-open"></i>
                         </div>
                         <div class="portfolio-info">Library Management</div>
                     </a>
-                    <a href="https://github.com/SenseiNSR/smart_retail" target="_blank" class="portfolio-item">
+                    <a href="#" class="portfolio-item" onclick="openModal('retail', event)">
                         <div class="portfolio-img bg-3">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
@@ -144,26 +144,18 @@
                         <div class="portfolio-info">IT & Networking</div>
                     </a>
                 </div>
-                <div class="center" style="margin-top: 30px;">
-                    <button id="view-more-btn" class="btn fill-btn">View More</button>
-                </div>
                 
-                <!-- Hidden Project Details -->
-                <div id="project-details" class="project-details hidden">
-                    <div class="project-detail-card">
-                        <h3>1. GESTUREX - Real-time Sign Language Detection System</h3>
-                        <p>Developed a real-time system to bridge communication gaps for hearing and speech impaired individuals. Used Python, OpenCV, and PyTorch to translate sign language gestures into text or speech. Implemented dynamic hand gesture recognition with high accuracy and low latency. Enhanced accessibility and inclusive communication through innovative technology.</p>
-                    </div>
-                    <div class="project-detail-card">
-                        <h3>2. Library Management System</h3>
-                        <p>Developed a web-based Library Management System using ASP.NET Core MVC and Microsoft SQL Server. Implemented book catalogue, student/librarian records, borrowing/returns, and publication management. Designed a responsive admin dashboard with authentication, search, statistics, quick actions, and dark mode. Centralized records to reduce paperwork and enable secure, efficient resource tracking.</p>
-                    </div>
-                    <div class="project-detail-card">
-                        <h3>3. Smart Retail</h3>
-                        <p>Completed an AI/ML Internship in Smart Retail, gaining hands-on experience in Python, data preprocessing, EDA, and feature engineering. Built and evaluated ML models using Regression, Classification, Decision Trees, Random Forest, SVM, and hyperparameter tuning. Worked with Clustering, PCA, Neural Networks, TensorFlow/PyTorch, Computer Vision, and Natural Language Processing. Developed and deployed ML pipelines using Flask/FastAPI, with Git/GitHub, model versioning, and capstone project experience.</p>
+                <!-- Project Modal -->
+                <div id="project-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <h3 id="modal-title">Project Title</h3>
+                        <p id="modal-text">Project description goes here.</p>
+                        <a id="modal-link" href="#" target="_blank" class="btn outline-btn" style="margin-top: 20px; display: inline-block;">View on GitHub</a>
                     </div>
                 </div>
             </section>
+
 
             <!-- Testimonial (Certifications) -->
             <section class="section testimonial-section">
@@ -284,7 +276,8 @@
                                 � Black Belt (1st Dan) in Karate<br>
                                 � Represented Madhya Pradesh in Karate in Nationals with Multiple Medals<br>
                                 � MMA (State level - Gold)<br>
-                                � Muay Thai (State Level - Gold)
+                                � Muay Thai (State Level - Gold)<br>
+                                � Horse Riding
                             </p>
                         </div>
                     </div>

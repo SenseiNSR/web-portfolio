@@ -703,10 +703,10 @@ ul {
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
-.portfolio-item.expanded .portfolio-dropdown {
+.portfolio-item:hover .portfolio-dropdown {
     max-height: 500px;
     opacity: 1;
 }
-.portfolio-item.expanded {
+.portfolio-item:hover {
     background-color: #4a4d53;
 }

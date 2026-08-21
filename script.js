@@ -122,18 +122,22 @@ gsap.from('.about-content p', {
     ease: 'power2.out'
 });
 
-// Skills Section
-gsap.from('.skill-card', {
-    scrollTrigger: {
-        trigger: '.skills-grid',
-        start: 'top 80%'
-    },
-    y: 30,
-    opacity: 0,
-    duration: 0.6,
-    stagger: 0.1,
-    ease: 'power2.out',
-    onComplete: () => gsap.set('.skill-card', {clearProps: "transform"})
+// Skills and Hobbies Sections
+gsap.utils.toArray('.skills-grid').forEach(grid => {
+    gsap.from(grid.querySelectorAll('.skill-card'), {
+        scrollTrigger: {
+            trigger: grid,
+            start: 'top 80%'
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power2.out',
+        onComplete: function() {
+            gsap.set(grid.querySelectorAll('.skill-card'), {clearProps: "transform"});
+        }
+    });
 });
 
 // Portfolio Section

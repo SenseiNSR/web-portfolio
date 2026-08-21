@@ -153,17 +153,19 @@ gsap.from('.portfolio-item', {
     ease: 'power3.out'
 });
 
-// Timeline / Experience Section
-gsap.from('.timeline-item', {
-    scrollTrigger: {
-        trigger: '.timeline',
-        start: 'top 80%'
-    },
-    x: -30,
-    opacity: 0,
-    duration: 0.6,
-    stagger: 0.2,
-    ease: 'power2.out'
+// Timeline Sections
+gsap.utils.toArray('.timeline').forEach(timeline => {
+    gsap.from(timeline.querySelectorAll('.timeline-item'), {
+        scrollTrigger: {
+            trigger: timeline,
+            start: 'top 80%'
+        },
+        x: -30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'power2.out'
+    });
 });
 
 // Testimonial Section

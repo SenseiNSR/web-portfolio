@@ -458,9 +458,9 @@ ul {
 }
 
 .cert-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
 }
 
 .cert-item {
@@ -633,6 +633,7 @@ ul {
     .hero-content { max-width: 100%; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .portfolio-grid { grid-template-columns: 1fr; }
+    .cert-list { grid-template-columns: 1fr; }
     .testimonial-container { flex-direction: column; gap: 30px; }
     .contact-container { flex-direction: column; gap: 30px; }
     .hero-image-placeholder { display: none; }

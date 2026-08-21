@@ -118,42 +118,57 @@
             <!-- Portfolio Section (Projects) -->
             <section id="portfolio" class="section portfolio-section">
                 <h2 class="section-title center">Portfolio</h2>
-                <div class="portfolio-grid">
-                    <a href="#" class="portfolio-item" onclick="openModal('gesturex', event)">
+                                <div class="portfolio-grid">
+                    <div class="portfolio-item" onclick="this.classList.toggle('expanded')">
                         <div class="portfolio-img bg-1">
                             <i class="fas fa-sign-language"></i>
                         </div>
-                        <div class="portfolio-info">GESTUREX (Sign Language ML)</div>
-                    </a>
-                    <a href="#" class="portfolio-item" onclick="openModal('library', event)">
+                        <div class="portfolio-info">
+                            <div class="portfolio-title">GESTUREX (Sign Language ML)</div>
+                            <div class="portfolio-dropdown">
+                                <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">Developed a real-time system to bridge communication gaps for hearing and speech impaired individuals. Used Python, OpenCV, and PyTorch to translate sign language gestures into text or speech. Implemented dynamic hand gesture recognition with high accuracy and low latency.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" onclick="this.classList.toggle('expanded')">
                         <div class="portfolio-img bg-2">
                             <i class="fas fa-book-open"></i>
                         </div>
-                        <div class="portfolio-info">Library Management</div>
-                    </a>
-                    <a href="#" class="portfolio-item" onclick="openModal('retail', event)">
+                        <div class="portfolio-info">
+                            <div class="portfolio-title">Library Management System</div>
+                            <div class="portfolio-dropdown">
+                                <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">Developed a web-based Library Management System using ASP.NET Core MVC and Microsoft SQL Server. Implemented book catalogue, student/librarian records, borrowing/returns, and publication management. Designed a responsive admin dashboard with authentication, search, statistics, quick actions, and dark mode.</p>
+                                <a href="https://github.com/SenseiNSR/Library_Management-MPOnline" target="_blank" class="btn outline-btn" style="margin-top: 15px; font-size: 12px; padding: 8px 15px;">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" onclick="this.classList.toggle('expanded')">
                         <div class="portfolio-img bg-3">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
-                        <div class="portfolio-info">Smart Retail AI</div>
-                    </a>
-                    <a href="#" class="portfolio-item">
+                        <div class="portfolio-info">
+                            <div class="portfolio-title">Smart Retail AI</div>
+                            <div class="portfolio-dropdown">
+                                <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">Completed an AI/ML Internship in Smart Retail, gaining hands-on experience in Python, data preprocessing, EDA, and feature engineering. Built and evaluated ML models using Regression, Classification, Decision Trees, Random Forest, SVM, and hyperparameter tuning.</p>
+                                <a href="https://github.com/SenseiNSR/smart_retail" target="_blank" class="btn outline-btn" style="margin-top: 15px; font-size: 12px; padding: 8px 15px;">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" onclick="this.classList.toggle('expanded')">
                         <div class="portfolio-img bg-4">
                             <i class="fas fa-network-wired"></i>
                         </div>
-                        <div class="portfolio-info">IT & Networking</div>
-                    </a>
-                </div>
-                
-                <!-- Project Modal -->
-                <div id="project-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close-btn" onclick="closeModal()">&times;</span>
-                        <h3 id="modal-title">Project Title</h3>
-                        <p id="modal-text">Project description goes here.</p>
-                        <a id="modal-link" href="#" target="_blank" class="btn outline-btn" style="margin-top: 20px; display: inline-block;">View on GitHub</a>
+                        <div class="portfolio-info">
+                            <div class="portfolio-title">IT & Networking</div>
+                            <div class="portfolio-dropdown">
+                                <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">General experience and projects covering modern IT infrastructure and Networking protocols.</p>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </section>
 
 

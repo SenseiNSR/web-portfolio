@@ -228,9 +228,9 @@ ul {
 .hero-image-placeholder {
     position: absolute;
     right: 50px;
-    bottom: 0;
-    width: 300px;
-    height: 350px;
+    bottom: 50px;
+    width: 270px;
+    height: 310px;
     background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.2) 100%);
     display: flex;
     justify-content: center;

@@ -271,3 +271,27 @@ function sendEmail() {
 }
 
 
+
+// Subtle 3D Tilt Effect
+document.querySelectorAll('.featured-project, .portfolio-item').forEach(card => {
+    card.addEventListener('mousemove', e => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth <= 768) return;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -3; // Subtle 3 deg max
+        const rotateY = ((x - centerX) / centerX) * 3;
+        
+        card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
+        card.style.transition = 'none';
+        card.style.boxShadow = `${-rotateY}px ${rotateX}px 25px rgba(0,0,0,0.3)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1200px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        card.style.transition = 'transform 0.4s ease-out, box-shadow 0.4s ease-out';
+        card.style.boxShadow = '';
+    });
+});

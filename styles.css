@@ -17,43 +17,18 @@
 body {
     background-color: var(--bg-color); /* Outer dark background */
     color: var(--text-primary);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    cursor: none; /* Hide default cursor */
+    /* cursor: none removed */
 }
 
-/* Custom Cursor */
-.custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-}
 
-.cursor-follower {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--accent-color);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-}
-
-/* Reset cursor for specific interactive things if wanted, but since we have a custom one, leaving it none is fine. */
 a, button, .btn, .skill-card, .portfolio-item {
     cursor: none;
 }
 
 h1, h2, h3, .hero-name, .section-title, .logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif; letter-spacing: -0.02em;
 }
 
 a {
@@ -88,7 +63,12 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(39, 40, 43, 0.85);
+    backdrop-filter: blur(10px);
 }
 
 .logo-icon svg {
@@ -710,4 +690,81 @@ ul {
 }
 .portfolio-item:hover {
     background-color: #4a4d53;
+}
+
+/* Featured Project */
+.featured-project {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.featured-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: rgba(255,255,255,0.8);
+    min-height: 300px;
+}
+.featured-info {
+    flex: 1.5;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.featured-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+.featured-info p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tech-tags span {
+    background-color: rgba(223, 179, 100, 0.1);
+    color: var(--accent-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .featured-project {
+        flex-direction: column;
+    }
+    .featured-img {
+        min-height: 200px;
+    }
+}
+
+/* Skills Categories */
+.skills-category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.skills-category h3 {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .skills-category-container {
+        grid-template-columns: 1fr;
+    }
 }

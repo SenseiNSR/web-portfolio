@@ -9,7 +9,7 @@
     <!-- Fonts: Playfair Display for headings, Roboto for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -32,7 +32,8 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-search">
@@ -44,9 +45,12 @@
             <!-- Hero Section -->
             <header class="hero">
                 <div class="hero-content">
-                    <p class="hero-intro">I'M <span class="hero-name">Nahar Singh Rana</span></p>
-                    <h2 class="hero-role">Computer Science Student &<br>AI-ML Enthusiast</h2>
-                    <a href="nsr_resume_updated.docx" class="btn contact-btn" download>Download Resume</a>
+                    <h1 class="hero-name" style="font-size: 3rem; font-weight: 700; margin-bottom: 10px;">Nahar Singh Rana</h1>
+                    <h2 class="hero-role" style="font-size: 1.8rem; font-weight: 400; color: var(--text-secondary); margin-bottom: 30px;">Computer Science Engineer building AI-powered software.</h2>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#portfolio" class="btn fill-btn">View Projects</a>
+                        <a href="nsr_resume_updated.docx" class="btn outline-btn" download>Download Resume</a>
+                    </div>
                 </div>
                 
                 <div class="hero-image-placeholder">
@@ -71,66 +75,28 @@
                 </div>
             </section>
 
-            <!-- Skills Section -->
-            <section class="section skills-section">
-                <h2 class="section-title center">My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-python skill-icon" style="color: #3776AB;"></i>
-                        <p>Python</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-java skill-icon" style="color: #f89820;"></i>
-                        <p>Java</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-brain skill-icon" style="color: #fff;"></i>
-                        <p>AI / ML</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-react skill-icon" style="color: #61DAFB;"></i>
-                        <p>React.js</p>
-                    </div>
-                    
-                    <div class="skill-card">
-                        <i class="fas fa-eye skill-icon" style="color: #7A7A7A;"></i>
-                        <p>OpenCV & CV</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-database skill-icon" style="color: #47A248;"></i>
-                        <p>MongoDB / SQL</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-html5 skill-icon" style="color: #E34F26;"></i>
-                        <p>HTML & CSS</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-js skill-icon" style="color: #F7DF1E;"></i>
-                        <p>JavaScript</p>
-                    </div>
-                </div>
-                
-                <div class="dots-decorator">
-                    <div class="dot-grid"></div>
-                </div>
-            </section>
-
             <!-- Portfolio Section (Projects) -->
             <section id="portfolio" class="section portfolio-section">
-                <h2 class="section-title center">Portfolio</h2>
-                                <div class="portfolio-grid">
-                    <div class="portfolio-item" >
-                        <div class="portfolio-img bg-1">
-                            <i class="fas fa-sign-language"></i>
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-title">GESTUREX (Sign Language ML)</div>
-                            <div class="portfolio-dropdown">
-                                <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">Developed a real-time system to bridge communication gaps for hearing and speech impaired individuals. Used Python, OpenCV, and PyTorch to translate sign language gestures into text or speech. Implemented dynamic hand gesture recognition with high accuracy and low latency.</p>
-                                
-                            </div>
-                        </div>
+                <h2 class="section-title center">Featured Projects</h2>
+                
+                <!-- Featured GESTUREX -->
+                <div class="featured-project">
+                    <div class="featured-img bg-1">
+                        <i class="fas fa-sign-language"></i>
                     </div>
+                    <div class="featured-info">
+                        <h3>GESTUREX (Sign Language ML)</h3>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>PyTorch</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <p>Developed a real-time system to bridge communication gaps for hearing and speech impaired individuals. Translates sign language gestures into text or speech using dynamic hand gesture recognition with high accuracy and low latency.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-grid" style="grid-template-columns: repeat(2, 1fr);">
                     <div class="portfolio-item" >
                         <div class="portfolio-img bg-2">
                             <i class="fas fa-book-open"></i>
@@ -155,21 +121,72 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-item" >
-                        <div class="portfolio-img bg-4">
-                            <i class="fas fa-network-wired"></i>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section skills-section" id="skills">
+                <h2 class="section-title center">Technical Skills</h2>
+                <div class="skills-category-container">
+                    <div class="skills-category">
+                        <h3>Languages & Web</h3>
+                        <div class="skills-grid" style="grid-template-columns: repeat(2, 1fr);">
+                            <div class="skill-card">
+                                <i class="fab fa-python skill-icon" style="color: #3776AB;"></i>
+                                <p>Python</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-java skill-icon" style="color: #f89820;"></i>
+                                <p>Java</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-react skill-icon" style="color: #61DAFB;"></i>
+                                <p>React.js</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-html5 skill-icon" style="color: #E34F26;"></i>
+                                <p>HTML/CSS</p>
+                            </div>
                         </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-title">IT & Networking</div>
-                            <div class="portfolio-dropdown">
-                                <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">General experience and projects covering modern IT infrastructure and Networking protocols.</p>
-                                
+                    </div>
+                    <div class="skills-category">
+                        <h3>AI & Data</h3>
+                        <div class="skills-grid" style="grid-template-columns: repeat(2, 1fr);">
+                            <div class="skill-card">
+                                <i class="fas fa-brain skill-icon" style="color: #fff;"></i>
+                                <p>AI / ML</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-eye skill-icon" style="color: #7A7A7A;"></i>
+                                <p>OpenCV</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-database skill-icon" style="color: #47A248;"></i>
+                                <p>SQL Server</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Tools & Infra</h3>
+                        <div class="skills-grid" style="grid-template-columns: repeat(2, 1fr);">
+                            <div class="skill-card">
+                                <i class="fab fa-git-alt skill-icon" style="color: #F05032;"></i>
+                                <p>Git/GitHub</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-network-wired skill-icon" style="color: var(--accent-color);"></i>
+                                <p>Networking</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-tools skill-icon" style="color: #ccc;"></i>
+                                <p>Troubleshooting</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </section>
+
+            
 
 
             <!-- Testimonial (Certifications) -->
@@ -225,8 +242,20 @@
             
 <!-- Education / Experience Section -->
             <section class="section experience-section">
-                <h2 class="section-title center">Education</h2>
+                <h2 class="section-title center">Experience & Education</h2>
                 <div class="timeline">
+                    <!-- Internship -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>MPOnline Limited</h3>
+                            <p class="timeline-subtitle">Software Engineering & AI/ML Intern</p>
+                            <p class="timeline-text">
+                                Hands-on internship focusing on real-world applications of AI/ML and advanced software engineering. Developed skills in model training, AI applications, modern software engineering practices, lifecycle management, and scalable development.
+                            </p>
+                        </div>
+                    </div>
                     <!-- Item 1 -->
                     <div class="timeline-item">
                         <div class="timeline-year">2027</div>
@@ -324,7 +353,8 @@
 
             <!-- Contact Section -->
             <section id="contact" class="section contact-section">
-                <h2 class="section-title center">Contact Me</h2>
+                <h2 class="section-title center">Let's Build Something Useful.</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">Currently open to software engineering & AI-ML internship opportunities.</p>
                 
                 <div class="contact-container">
                     <div class="contact-info">

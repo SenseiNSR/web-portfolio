@@ -17,18 +17,43 @@
 body {
     background-color: var(--bg-color); /* Outer dark background */
     color: var(--text-primary);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif; letter-spacing: -0.01em;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    /* cursor: none removed */
+    cursor: none; /* Hide default cursor */
 }
 
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}
 
+.cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* Reset cursor for specific interactive things if wanted, but since we have a custom one, leaving it none is fine. */
 a, button, .btn, .skill-card, .portfolio-item {
     cursor: none;
 }
 
 h1, h2, h3, .hero-name, .section-title, .logo {
-    font-family: 'Inter', sans-serif; letter-spacing: -0.02em;
+    font-family: 'Playfair Display', serif;
 }
 
 a {
@@ -63,12 +88,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(39, 40, 43, 0.85);
-    backdrop-filter: blur(10px);
+    padding: 30px 0;
 }
 
 .logo-icon svg {
@@ -616,16 +636,7 @@ ul {
     .cert-list { grid-template-columns: 1fr; }
     .testimonial-container { flex-direction: column; gap: 30px; }
     .contact-container { flex-direction: column; gap: 30px; }
-    
-        .hero-image-placeholder {
-            position: relative;
-            right: auto;
-            bottom: auto;
-            width: 200px;
-            height: 230px;
-            margin: 40px auto 0 auto;
-        }
-
+    .hero-image-placeholder { display: none; }
 }
 
 /* Modal Styles */
@@ -699,246 +710,4 @@ ul {
 }
 .portfolio-item:hover {
     background-color: #4a4d53;
-}
-
-/* Featured Project */
-.featured-project {
-    display: flex;
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-.featured-img {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
-    color: rgba(255,255,255,0.8);
-    min-height: 300px;
-}
-.featured-info {
-    flex: 1.5;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.featured-info h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--accent-color);
-}
-.featured-info p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-.tech-tags span {
-    background-color: rgba(223, 179, 100, 0.1);
-    color: var(--accent-color);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-}
-@media (max-width: 768px) {
-    .featured-project {
-        flex-direction: column;
-    }
-    .featured-img {
-        min-height: 200px;
-    }
-}
-
-/* Skills Categories */
-.skills-category-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-.skills-category h3 {
-    margin-bottom: 20px;
-    color: var(--text-secondary);
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-}
-@media (max-width: 768px) {
-    .skills-category-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Refinement Hover Effects */
-.featured-project, .cert-item, .skill-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.featured-project:hover, .cert-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-.skill-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Global Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* offset for sticky nav */
-}
-
-/* Subtle 3D Buttons */
-.btn {
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-.btn:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Hero Depth */
-.hero {
-    position: relative;
-}
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 60%;
-    background: radial-gradient(circle, rgba(223, 179, 100, 0.03) 0%, transparent 70%);
-    z-index: 1;
-    pointer-events: none;
-}
-/* Enhanced GESTUREX Depth */
-.featured-project {
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Awwwards Style Typography & Layout */
-.hero-name {
-    font-size: clamp(3rem, 8vw, 8rem) !important;
-    line-height: 1.1 !important;
-    letter-spacing: -0.04em !important;
-    margin-bottom: 20px !important;
-    background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.hero-role {
-    font-size: clamp(1.2rem, 2vw, 1.8rem) !important;
-    max-width: 600px;
-    margin-bottom: 40px !important;
-}
-.hero-content {
-    z-index: 2;
-}
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Featured Project Awwwards Style */
-.featured-project {
-    flex-direction: column !important;
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    margin-bottom: 80px !important;
-}
-.featured-img {
-    width: 100%;
-    height: 60vh !important;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    transform-origin: center center;
-}
-.featured-img i {
-    font-size: 120px !important;
-    opacity: 0.5;
-}
-.featured-info {
-    padding: 40px 0 !important;
-    max-width: 800px;
-}
-.featured-info h3 {
-    font-size: clamp(2rem, 5vw, 4rem) !important;
-    letter-spacing: -0.03em;
-    margin-bottom: 20px !important;
-}
-
-/* Other Projects Awwwards Style */
-.portfolio-grid {
-    display: flex !important;
-    flex-direction: column;
-    gap: 100px;
-}
-.portfolio-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 60px;
-    background: transparent !important;
-}
-.portfolio-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-.portfolio-img {
-    flex: 1;
-    height: 400px !important;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.portfolio-info {
-    flex: 1;
-    padding: 0 !important;
-}
-.portfolio-dropdown {
-    max-height: none !important;
-    opacity: 1 !important;
-    position: relative !important;
-    background: transparent !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    pointer-events: auto !important;
-    margin-top: 20px;
-}
-.portfolio-title {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    letter-spacing: -0.02em;
-    color: var(--text-primary) !important;
-}
-
-@media (max-width: 768px) {
-    .portfolio-item, .portfolio-item:nth-child(even) {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .featured-img {
-        height: 40vh !important;
-    }
-    .portfolio-img {
-        height: 300px !important;
-        width: 100%;
-    }
 }

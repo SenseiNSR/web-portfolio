@@ -17,7 +17,7 @@
 body {
     background-color: var(--bg-color); /* Outer dark background */
     color: var(--text-primary);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; letter-spacing: -0.01em;
     line-height: 1.6;
     /* cursor: none removed */
 }
@@ -616,7 +616,16 @@ ul {
     .cert-list { grid-template-columns: 1fr; }
     .testimonial-container { flex-direction: column; gap: 30px; }
     .contact-container { flex-direction: column; gap: 30px; }
-    .hero-image-placeholder { display: none; }
+    
+        .hero-image-placeholder {
+            position: relative;
+            right: auto;
+            bottom: auto;
+            width: 200px;
+            height: 230px;
+            margin: 40px auto 0 auto;
+        }
+
 }
 
 /* Modal Styles */
@@ -767,4 +776,23 @@ ul {
     .skills-category-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* Refinement Hover Effects */
+.featured-project, .cert-item, .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.featured-project:hover, .cert-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Global Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* offset for sticky nav */
 }

@@ -345,6 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (galleryItems.length === 0) return;
         currentIndex = index;
         const src = galleryItems[currentIndex].getAttribute('data-src');
+        if (!src) { closeLightbox(); return; }
         lightboxImg.src = src;
         counter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
         

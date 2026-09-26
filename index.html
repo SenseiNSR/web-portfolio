@@ -109,123 +109,147 @@
             </section>
 
             <!-- Portfolio Section (Projects) -->
-            <section id="portfolio" class="section portfolio-section">
-                <h2 class="section-title center">Portfolio</h2>
-                                <div class="portfolio-grid">
-                    <div class="portfolio-item click-expandable" tabindex="0" role="button" aria-expanded="false">
-                        <div class="portfolio-img bg-1">
-                            <i class="fas fa-sign-language"></i>
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-title">GESTURE-AID (Sign Language ML)</div>
-                            <div class="expand-indicator" style="margin-top: 15px; font-size: 13px; color: var(--accent-color); font-weight: 500;">View Project Details &darr;</div>
-                            <div class="portfolio-dropdown">
-                                  <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">An AI-powered assistive communication system designed to bridge the gap between hearing/speech-impaired individuals and those who do not understand sign language. It tracks hand movements in 3D space via webcam, translating dynamic sign language gestures into text and synthesized speech in real time. Built using Python, OpenCV, MediaPipe, and a custom PyTorch LSTM neural network, it processes the temporal flow of gestures for high accuracy. Features include a CustomTkinter dashboard, temporal smoothing to debounce jitter, and an end-to-end edge-ready ML pipeline.</p>
-<a href="https://github.com/SenseiNSR/gesture_aid" target="_blank" class="btn outline-btn" style="display: inline-block; margin-top: 15px; font-size: 12px; padding: 8px 15px;">View Project</a>
-<div class="collapse-indicator" tabindex="0" role="button" style="font-size: 13px; color: var(--accent-color); font-weight: 500; cursor: pointer; display: inline-block; margin-left: 15px;">Hide Project Details &uarr;</div>
-                                  </div>
-                        </div>
-                    </div>
-                    
-                      <div class="portfolio-item athenaeum-card" tabindex="0" role="button" aria-expanded="false">
-                          <div class="portfolio-img bg-2">
-                              <i class="fas fa-book-open"></i>
-                          </div>
-                          <div class="portfolio-info">
-                              <div class="portfolio-title">Athenaeum</div>
-                              <p style="font-size: 13px; color: var(--text-secondary); margin-top: 5px;">Library Management System</p>
-                              
-                              <div class="expand-indicator" style="margin-top: 15px; font-size: 13px; color: var(--accent-color); font-weight: 500;">
-                                  View Project Details &darr;
-                              </div>
+            
+<section id="portfolio" class="section portfolio-section">
+    <div class="portfolio-header-new" style="text-align: center; margin-bottom: 40px;">
+        <h2 class="section-title center" style="margin-bottom: 10px;">Projects</h2>
+        <p style="color: var(--text-secondary); font-size: 16px;">A selection of projects I've built, explored, and shipped.</p>
+    </div>
+    
+    <div class="portfolio-grid-new">
+        
+        <!-- GESTURE-AID -->
+        <div class="project-card">
+            <div class="project-preview gallery-item" tabindex="0" data-src="">
+                <div class="preview-placeholder bg-1">
+                    <i class="fas fa-sign-language"></i>
+                    <span>Project Preview</span>
+                </div>
+                <div class="preview-overlay"><span>View Preview &#x2197;</span></div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">GESTURE-AID</h3>
+                <h4 class="project-subtitle">Sign Language Recognition</h4>
+                <p class="project-description">An AI-powered assistive communication system designed to bridge the gap between hearing/speech-impaired individuals and those who do not understand sign language. It tracks hand movements in 3D space via webcam, translating dynamic sign language gestures into text and synthesized speech in real time.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">MediaPipe</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/SenseiNSR/gesture_aid" target="_blank" class="action-link">View Project &rarr;</a>
+                </div>
+            </div>
+        </div>
 
-                              <div class="athenaeum-details">
-                                  <div class="athenaeum-content">
-                                      <p class="athenaeum-desc">Athenaeum is a modern Library Management System designed to streamline book cataloging, member management, and library circulation. The system provides an interactive dashboard, organized book catalog, member management, and issue/return workflows through a clean and responsive interface.</p>
-                                      
-                                      <div class="athenaeum-layout">
-                                          <div class="athenaeum-left">
-                                              <div class="athenaeum-section">
-                                                  <h4>Key Features</h4>
-                                                  <ul class="feature-list">
-                                                      <li>&#128218; Book Catalog & Genre Organization</li>
-                                                      <li>&#128101; Member Management</li>
-                                                      <li>&#128259; Book Issue & Return Management</li>
-                                                      <li>&#128202; Library Dashboard & Statistics</li>
-                                                      <li>&#128269; Search & Filtering</li>
-                                                      <li>&#127769; Light / Dark Mode</li>
-                                                      <li>&#128241; Responsive Interface</li>
-                                                  </ul>
-                                              </div>
-                                              
-                                              <div class="athenaeum-section">
-                                                  <h4>Tech Stack</h4>
-                                                  <div class="tech-tags">
-                                                      <span class="tech-tag">Python</span>
-                                                      <span class="tech-tag">Flask</span>
-                                                      <span class="tech-tag">SQLite3</span>
-                                                      <span class="tech-tag">HTML/CSS</span>
-                                                      <span class="tech-tag">Jinja2</span>
-                                                  </div>
-                                              </div>
-                                              
-                                              <div class="athenaeum-section">
-                                                  <h4>Project Status</h4>
-                                                  <div class="status-indicator"><span class="status-dot"></span> Completed</div>
-                                              </div>
-                                          </div>
-                                          
-                                          <div class="athenaeum-right">
-                                              <h4>Screenshot Gallery</h4>
-                                              <div class="screenshot-gallery">
-                                                  <div class="gallery-item" tabindex="0" data-src="athenaeum.png">
-                                                      <img src="athenaeum.png" alt="Athenaeum Dashboard Screenshot 1" loading="lazy">
-                                                      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      
-                                      <div class="athenaeum-footer">
-                                          <a href="https://github.com/SenseiNSR/Library_management-" target="_blank" class="btn outline-btn" style="display: inline-block; font-size: 12px; padding: 8px 15px;">View Project</a>
-                                          <div class="collapse-indicator" tabindex="0" role="button" style="font-size: 13px; color: var(--accent-color); font-weight: 500; cursor: pointer; display: inline-block; margin-left: 15px;">
-                                              Hide Project Details &uarr;
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="portfolio-item click-expandable" tabindex="0" role="button" aria-expanded="false">
-                        <div class="portfolio-img bg-3">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-title">Smart Retail</div>
-                            <div class="expand-indicator" style="margin-top: 15px; font-size: 13px; color: var(--accent-color); font-weight: 500;">View Project Details &darr;</div>
-                            <div class="portfolio-dropdown">
-                                  <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">A comprehensive, modular AI/ML web application designed to simulate the "brain" of a modern retail store by combining Computer Vision, NLP, and Predictive Analytics. Built entirely from scratch using Streamlit, OpenCV, and Scikit-Learn, it features four core modules: Product Image Classification, Customer Face Recognition, Sentiment Analysis, and Customer Churn Prediction. The platform operates completely locally, utilizing a SQLite database and an automated setup pipeline to help retail businesses automate operations, personalize experiences, and retain shoppers.</p>
-<a href="https://github.com/SenseiNSR/Smart_retail" target="_blank" class="btn outline-btn" style="display: inline-block; margin-top: 15px; font-size: 12px; padding: 8px 15px;">View Project</a>
-                                  </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item click-expandable" tabindex="0" role="button" aria-expanded="false">
-                        <div class="portfolio-img bg-4">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-title">IT & Networking</div>
-                            <div class="expand-indicator" style="margin-top: 15px; font-size: 13px; color: var(--accent-color); font-weight: 500;">View Project Details &darr;</div>
-                            <div class="portfolio-dropdown">
-                                <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; text-align: left;">General experience and projects covering modern IT infrastructure and Networking protocols.</p>
-<div class="collapse-indicator" tabindex="0" role="button" style="font-size: 13px; color: var(--accent-color); font-weight: 500; cursor: pointer; display: inline-block; margin-top: 15px;">Hide Project Details &uarr;</div>
-                                
+        <!-- Athenaeum -->
+        <div class="project-card athenaeum-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="project-preview gallery-item" tabindex="0" data-src="athenaeum.png">
+                <img src="athenaeum.png" alt="Athenaeum Library Management System" class="preview-img">
+                <div class="preview-overlay"><span>View Preview &#x2197;</span></div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Athenaeum</h3>
+                <h4 class="project-subtitle">Library Management System</h4>
+                <p class="project-description">A sleek, web-based Library Management System built with Python, Flask, and SQLite3. It features a real-time analytics dashboard, a dynamic book catalog, member management, and a circulation tracking system with smart status updates.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">JS</span>
+                </div>
+                
+                <div class="project-actions">
+                    <div class="expand-indicator action-link" style="cursor: pointer;">View Project Details &darr;</div>
+                </div>
+
+                <!-- Expanded Details (hidden by default) -->
+                <div class="athenaeum-details">
+                    <div class="athenaeum-content" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="athenaeum-desc" style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Athenaeum is a modern Library Management System designed to streamline book cataloging, member management, and library circulation. The system provides an interactive dashboard, organized book catalog, member management, and issue/return workflows through a clean and responsive interface.</p>
+                        
+                        <div class="athenaeum-layout" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <div class="athenaeum-left" style="flex: 1; min-width: 200px;">
+                                <h4 style="font-size: 15px; margin-bottom: 10px;">Key Features</h4>
+                                <ul style="list-style: none; padding: 0; font-size: 13px; color: var(--text-secondary); line-height: 1.8;">
+                                    <li>&#8226; Book catalog</li>
+                                    <li>&#8226; Member management</li>
+                                    <li>&#8226; Circulation</li>
+                                    <li>&#8226; Dashboard analytics</li>
+                                </ul>
                             </div>
+                            <div class="athenaeum-right" style="flex: 1.5; min-width: 250px;">
+                                <h4 style="font-size: 15px; margin-bottom: 10px;">Project Screenshots</h4>
+                                <div class="screenshot-gallery" style="display: flex; gap: 10px;">
+                                    <div class="gallery-item" tabindex="0" data-src="athenaeum.png" style="flex: 1; border-radius: 4px; overflow: hidden; cursor: zoom-in; position: relative;">
+                                        <img src="athenaeum.png" alt="Athenaeum Screenshot 1" style="width: 100%; height: auto; display: block;">
+                                        <div class="gallery-overlay" style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s;"><i class="fas fa-expand"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="athenaeum-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
+                            <a href="https://github.com/SenseiNSR/Library_management-" target="_blank" class="action-link" style="color: var(--accent-color);">View Source Code &rarr;</a>
+                            <div class="collapse-indicator action-link" tabindex="0" role="button" style="cursor: pointer;">Hide Project Details &uarr;</div>
                         </div>
                     </div>
                 </div>
-                
-            </section>
+            </div>
+        </div>
+
+        <!-- Smart Retail -->
+        <div class="project-card">
+            <div class="project-preview gallery-item" tabindex="0" data-src="">
+                <div class="preview-placeholder bg-3">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Project Preview</span>
+                </div>
+                <div class="preview-overlay"><span>View Preview &#x2197;</span></div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Smart Retail</h3>
+                <h4 class="project-subtitle">AI/ML Application</h4>
+                <p class="project-description">A comprehensive, modular AI/ML web application designed to simulate the "brain" of a modern retail store by combining Computer Vision, NLP, and Predictive Analytics. It features four core modules: Product Image Classification, Customer Face Recognition, Sentiment Analysis, and Customer Churn Prediction.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Scikit-Learn</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/SenseiNSR/Smart_retail" target="_blank" class="action-link">View Project &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- IT & Networking -->
+        <div class="project-card">
+            <div class="project-preview gallery-item" tabindex="0" data-src="">
+                <div class="preview-placeholder bg-4">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Project Preview</span>
+                </div>
+                <div class="preview-overlay"><span>View Preview &#x2197;</span></div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">IT & Networking</h3>
+                <h4 class="project-subtitle">Infrastructure Projects</h4>
+                <p class="project-description">General experience and projects covering modern IT infrastructure and Networking protocols.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Networking</span>
+                    <span class="tech-tag">Infrastructure</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="action-link">View Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
 
             <!-- Testimonial (Certifications) -->

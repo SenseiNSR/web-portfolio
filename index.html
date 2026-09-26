@@ -19,14 +19,20 @@
     <div class="main-wrapper">
         <div class="portfolio-container">
             <!-- Navigation -->
-            <nav class="navbar">
+            <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
                 <div class="logo">
                     <a href="#" style="display: flex; align-items: center;">
-                        <img src="portfolio-logo.png" alt="NSR Logo" class="main-logo-img" style="height: 40px; width: auto; object-fit: contain;">
+                        <img src="portfolio-logo.png" alt="NSR Logo" class="main-logo-img" style="height: 40px; width: auto; object-fit: contain; mix-blend-mode: screen;">
                     </a>
                 </div>
                 
-                
+                <ul class="nav-links" style="display: flex; gap: 30px; list-style: none; margin: 0; padding: 0;">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">My Skills</a></li>
+                    <li><a href="#portfolio" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Me</a></li>
+                </ul>
             </nav>
 
             <!-- Hero Section -->
@@ -60,7 +66,7 @@
             </section>
 
             <!-- Skills Section -->
-            <section class="section skills-section">
+            <section id="skills" class="section skills-section">
                 <h2 class="section-title center">My Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-card">
@@ -288,7 +294,7 @@
 
 
             <!-- Testimonial (Certifications) -->
-            <section class="section testimonial-section">
+            <section id="certifications" class="section testimonial-section">
                 <div class="dots-decorator left-dots">
                     <div class="dot-grid small"></div>
                 </div>

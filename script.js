@@ -271,3 +271,147 @@ function sendEmail() {
 }
 
 
+
+
+// Athenaeum Expansion Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const athenaeumCard = document.querySelector('.athenaeum-card');
+    if (athenaeumCard) {
+        // Expand card when clicked
+        athenaeumCard.addEventListener('click', function(e) {
+            // Prevent expansion if clicking inside the expanded details already, 
+            // unless they click the expand-indicator itself.
+            if (e.target.closest('.athenaeum-details') && !e.target.closest('.collapse-indicator') && !e.target.closest('.gallery-item')) {
+                return;
+            }
+            if (e.target.closest('a')) return;
+            
+            if (!this.classList.contains('expanded')) {
+                this.classList.add('expanded');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Keyboard accessibility for expansion
+        athenaeumCard.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (!this.classList.contains('expanded')) {
+                    e.preventDefault();
+                    this.classList.add('expanded');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            }
+        });
+
+        // Collapse card
+        const collapseBtn = document.querySelector('.collapse-indicator');
+        if (collapseBtn) {
+            collapseBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                athenaeumCard.classList.remove('expanded');
+                athenaeumCard.setAttribute('aria-expanded', 'false');
+                athenaeumCard.focus();
+                
+                // Scroll back to the card smoothly
+                setTimeout(() => {
+                    athenaeumCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            });
+            
+            collapseBtn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    athenaeumCard.classList.remove('expanded');
+                    athenaeumCard.setAttribute('aria-expanded', 'false');
+                    athenaeumCard.focus();
+                }
+            });
+        }
+    }
+
+    // Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    const counter = document.querySelector('.lightbox-counter');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        if (galleryItems.length === 0) return;
+        currentIndex = index;
+        const src = galleryItems[currentIndex].getAttribute('data-src');
+        lightboxImg.src = src;
+        counter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+        
+        // Handle single image case
+        if (galleryItems.length <= 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        } else {
+            prevBtn.style.display = 'block';
+            nextBtn.style.display = 'block';
+        }
+        
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        closeBtn.focus();
+        document.body.style.overflow = 'hidden'; // prevent scrolling
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (galleryItems[currentIndex]) galleryItems[currentIndex].focus();
+    }
+
+    function nextImage() {
+        if (galleryItems.length <= 1) return;
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        openLightbox(currentIndex);
+    }
+
+    function prevImage() {
+        if (galleryItems.length <= 1) return;
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        openLightbox(currentIndex);
+    }
+
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openLightbox(index);
+        });
+        item.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                e.stopPropagation();
+                openLightbox(index);
+            }
+        });
+    });
+
+    if (lightbox) {
+        closeBtn.addEventListener('click', closeLightbox);
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+    }
+});

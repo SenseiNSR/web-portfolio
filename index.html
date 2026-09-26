@@ -118,8 +118,8 @@
     
     <div class="portfolio-grid-new">
         
-        <!-- GESTURE-AID -->
-        <div class="project-card">
+                <!-- GESTURE-AID -->
+        <div class="project-card expandable-card" tabindex="0" role="button" aria-expanded="false">
             <div class="project-preview gallery-item" tabindex="0" data-src="gesture-aid.png">
                 <img src="gesture-aid.png" alt="Gesture Aid Dashboard" class="preview-img">
                 <div class="preview-overlay"><span>View Preview &#x2197;</span></div>
@@ -135,13 +135,47 @@
                     <span class="tech-tag">MediaPipe</span>
                 </div>
                 <div class="project-actions">
-                    <a href="https://github.com/SenseiNSR/gesture_aid" target="_blank" class="action-link">View Project &rarr;</a>
+                    <div class="expand-indicator action-link" style="cursor: pointer;">View Project Details &darr;</div>
+                </div>
+
+                <!-- Expanded Details (hidden by default) -->
+                <div class="expandable-details">
+                    <div class="expandable-content" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="expandable-desc" style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">An AI-powered assistive communication system designed to bridge the gap between hearing/speech-impaired individuals and those who do not understand sign language. It captures a live webcam feed, tracks hand movements in 3D space, and translates dynamic sign language gestures into readable text and synthesized speech in real time. Instead of just recognizing static hand poses, the system continuously monitors the temporal flow of gestures using a rolling window of frames.</p>
+                        
+                        <div class="expandable-layout" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <div class="expandable-left" style="flex: 1; min-width: 200px;">
+                                <h4 style="font-size: 15px; margin-bottom: 10px;">Key Features</h4>
+                                <ul style="list-style: none; padding: 0; font-size: 13px; color: var(--text-secondary); line-height: 1.8;">
+                                    <li>&#8226; Real-time translation</li>
+                                    <li>&#8226; 3D Hand Tracking</li>
+                                    <li>&#8226; Temporal Gesture Flow</li>
+                                    <li>&#8226; Jitter Debouncing</li>
+                                    <li>&#8226; Offline Speech Synthesis</li>
+                                </ul>
+                            </div>
+                            <div class="expandable-right" style="flex: 1.5; min-width: 250px;">
+                                <h4 style="font-size: 15px; margin-bottom: 10px;">Project Screenshots</h4>
+                                <div class="screenshot-gallery" style="display: flex; gap: 10px;">
+                                    <div class="gallery-item" tabindex="0" data-src="gesture-aid.png" style="flex: 1; border-radius: 4px; overflow: hidden; cursor: zoom-in; position: relative;">
+                                        <img src="gesture-aid.png" alt="Gesture Aid Screenshot" style="width: 100%; height: auto; display: block;">
+                                        <div class="gallery-overlay" style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s;"><i class="fas fa-expand"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="expandable-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
+                            <a href="https://github.com/SenseiNSR/gesture_aid" target="_blank" class="action-link" style="color: var(--accent-color);">View Source Code &rarr;</a>
+                            <div class="collapse-indicator action-link" tabindex="0" role="button" style="cursor: pointer;">Hide Project Details &uarr;</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Athenaeum -->
-        <div class="project-card athenaeum-card" tabindex="0" role="button" aria-expanded="false">
+<!-- Athenaeum -->
+        <div class="project-card expandable-card" tabindex="0" role="button" aria-expanded="false">
             <div class="project-preview gallery-item" tabindex="0" data-src="athenaeum.png">
                 <img src="athenaeum.png" alt="Athenaeum Library Management System" class="preview-img">
                 <div class="preview-overlay"><span>View Preview &#x2197;</span></div>
@@ -162,12 +196,12 @@
                 </div>
 
                 <!-- Expanded Details (hidden by default) -->
-                <div class="athenaeum-details">
-                    <div class="athenaeum-content" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                        <p class="athenaeum-desc" style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Athenaeum is a modern Library Management System designed to streamline book cataloging, member management, and library circulation. The system provides an interactive dashboard, organized book catalog, member management, and issue/return workflows through a clean and responsive interface.</p>
+                <div class="expandable-details">
+                    <div class="expandable-content" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="expandable-desc" style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Athenaeum is a modern Library Management System designed to streamline book cataloging, member management, and library circulation. The system provides an interactive dashboard, organized book catalog, member management, and issue/return workflows through a clean and responsive interface.</p>
                         
-                        <div class="athenaeum-layout" style="display: flex; gap: 20px; flex-wrap: wrap;">
-                            <div class="athenaeum-left" style="flex: 1; min-width: 200px;">
+                        <div class="expandable-layout" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <div class="expandable-left" style="flex: 1; min-width: 200px;">
                                 <h4 style="font-size: 15px; margin-bottom: 10px;">Key Features</h4>
                                 <ul style="list-style: none; padding: 0; font-size: 13px; color: var(--text-secondary); line-height: 1.8;">
                                     <li>&#8226; Book catalog</li>
@@ -176,7 +210,7 @@
                                     <li>&#8226; Dashboard analytics</li>
                                 </ul>
                             </div>
-                            <div class="athenaeum-right" style="flex: 1.5; min-width: 250px;">
+                            <div class="expandable-right" style="flex: 1.5; min-width: 250px;">
                                 <h4 style="font-size: 15px; margin-bottom: 10px;">Project Screenshots</h4>
                                 <div class="screenshot-gallery" style="display: flex; gap: 10px;">
                                     <div class="gallery-item" tabindex="0" data-src="athenaeum.png" style="flex: 1; border-radius: 4px; overflow: hidden; cursor: zoom-in; position: relative;">
@@ -187,7 +221,7 @@
                             </div>
                         </div>
                         
-                        <div class="athenaeum-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
+                        <div class="expandable-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
                             <a href="https://github.com/SenseiNSR/Library_management-" target="_blank" class="action-link" style="color: var(--accent-color);">View Source Code &rarr;</a>
                             <div class="collapse-indicator action-link" tabindex="0" role="button" style="cursor: pointer;">Hide Project Details &uarr;</div>
                         </div>
@@ -196,8 +230,8 @@
             </div>
         </div>
 
-        <!-- Smart Retail -->
-        <div class="project-card">
+                <!-- Smart Retail -->
+        <div class="project-card expandable-card" tabindex="0" role="button" aria-expanded="false">
             <div class="project-preview gallery-item" tabindex="0" data-src="smart-retail.png">
                 <img src="smart-retail.png" alt="Smart Retail Dashboard" class="preview-img">
                 <div class="preview-overlay"><span>View Preview &#x2197;</span></div>
@@ -213,12 +247,45 @@
                     <span class="tech-tag">Scikit-Learn</span>
                 </div>
                 <div class="project-actions">
-                    <a href="https://github.com/SenseiNSR/Smart_retail" target="_blank" class="action-link">View Project &rarr;</a>
+                    <div class="expand-indicator action-link" style="cursor: pointer;">View Project Details &darr;</div>
+                </div>
+
+                <!-- Expanded Details (hidden by default) -->
+                <div class="expandable-details">
+                    <div class="expandable-content" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="expandable-desc" style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Smart Retail AI is a comprehensive, modular AI/ML web application designed to simulate the "brain" of a modern, automated retail store. It combines Computer Vision, Natural Language Processing (NLP), and Predictive Analytics into a single dashboard to help retail businesses automate operations, personalize customer experiences, and retain shoppers.</p>
+                        
+                        <div class="expandable-layout" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <div class="expandable-left" style="flex: 1; min-width: 200px;">
+                                <h4 style="font-size: 15px; margin-bottom: 10px;">Key Features</h4>
+                                <ul style="list-style: none; padding: 0; font-size: 13px; color: var(--text-secondary); line-height: 1.8;">
+                                    <li>&#8226; Product Image Classification</li>
+                                    <li>&#8226; Customer Face Recognition</li>
+                                    <li>&#8226; Sentiment Analysis</li>
+                                    <li>&#8226; Customer Churn Prediction</li>
+                                </ul>
+                            </div>
+                            <div class="expandable-right" style="flex: 1.5; min-width: 250px;">
+                                <h4 style="font-size: 15px; margin-bottom: 10px;">Project Screenshots</h4>
+                                <div class="screenshot-gallery" style="display: flex; gap: 10px;">
+                                    <div class="gallery-item" tabindex="0" data-src="smart-retail.png" style="flex: 1; border-radius: 4px; overflow: hidden; cursor: zoom-in; position: relative;">
+                                        <img src="smart-retail.png" alt="Smart Retail Screenshot" style="width: 100%; height: auto; display: block;">
+                                        <div class="gallery-overlay" style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s;"><i class="fas fa-expand"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="expandable-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
+                            <a href="https://github.com/SenseiNSR/Smart_retail" target="_blank" class="action-link" style="color: var(--accent-color);">View Source Code &rarr;</a>
+                            <div class="collapse-indicator action-link" tabindex="0" role="button" style="cursor: pointer;">Hide Project Details &uarr;</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- IT & Networking -->
+<!-- IT & Networking -->
         <div class="project-card">
             <div class="project-preview gallery-item" tabindex="0" data-src="">
                 <div class="preview-placeholder bg-4">

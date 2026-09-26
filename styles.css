@@ -710,57 +710,57 @@ ul {
 }
 
 /* Athenaeum Custom Styles */
-.athenaeum-card {
+.expandable-card {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.athenaeum-card:focus-visible {
+.expandable-card:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 4px;
 }
 
-.athenaeum-details {
+.expandable-details {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-.athenaeum-card.expanded .athenaeum-details {
+.expandable-card.expanded .expandable-details {
     max-height: 1500px;
     opacity: 1;
 }
 
-.athenaeum-card.expanded .expand-indicator {
+.expandable-card.expanded .expand-indicator {
     display: none;
 }
 
-.athenaeum-content {
+.expandable-content {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.athenaeum-desc {
+.expandable-desc {
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 25px;
 }
 
-.athenaeum-layout {
+.expandable-layout {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.athenaeum-left {
+.expandable-left {
     flex: 1;
     min-width: 250px;
 }
 
-.athenaeum-right {
+.expandable-right {
     flex: 1.5;
     min-width: 300px;
 }
@@ -864,7 +864,7 @@ ul {
     opacity: 1;
 }
 
-.athenaeum-footer {
+.expandable-footer {
     margin-top: 25px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -951,10 +951,10 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .athenaeum-layout {
+    .expandable-layout {
         flex-direction: column;
     }
-    .athenaeum-right {
+    .expandable-right {
         min-width: 100%;
     }
 }
@@ -1111,7 +1111,7 @@ ul {
     overflow: hidden;
 }
 
-.athenaeum-card.expanded .project-description {
+.expandable-card.expanded .project-description {
     -webkit-line-clamp: unset;
 }
 

@@ -1191,3 +1191,15 @@ ul {
     padding: 0 !important;
 }
 
+
+.project-title {
+    display: flex;
+    align-items: center;
+}
+.project-logo {
+    height: 32px;
+    width: auto;
+    margin-right: 12px;
+    border-radius: 6px;
+    object-fit: contain;
+}

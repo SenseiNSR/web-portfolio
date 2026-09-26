@@ -704,10 +704,7 @@ ul {
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
-.portfolio-item:hover .portfolio-dropdown {
-    max-height: 800px;
-    opacity: 1;
-}
+
 .portfolio-item:hover {
     background-color: #4a4d53;
 }
@@ -960,4 +957,24 @@ ul {
     .athenaeum-right {
         min-width: 100%;
     }
+}
+
+
+.click-expandable {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.click-expandable:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+.click-expandable.expanded .portfolio-dropdown {
+    max-height: 800px;
+    opacity: 1;
+}
+
+.click-expandable.expanded .expand-indicator {
+    display: none;
 }

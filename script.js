@@ -415,3 +415,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// Universal click-to-expand for portfolio items
+document.addEventListener('DOMContentLoaded', () => {
+    const expandableItems = document.querySelectorAll('.click-expandable');
+    expandableItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (e.target.closest('.portfolio-dropdown') && !e.target.closest('.collapse-indicator')) {
+                return;
+            }
+            if (e.target.closest('a')) return;
+            
+            if (!this.classList.contains('expanded')) {
+                this.classList.add('expanded');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        item.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (!this.classList.contains('expanded')) {
+                    e.preventDefault();
+                    this.classList.add('expanded');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            }
+        });
+
+        const collapseBtn = item.querySelector('.collapse-indicator');
+        if (collapseBtn) {
+            collapseBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                item.classList.remove('expanded');
+                item.setAttribute('aria-expanded', 'false');
+                item.focus();
+                
+                setTimeout(() => {
+                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            });
+            
+            collapseBtn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    item.classList.remove('expanded');
+                    item.setAttribute('aria-expanded', 'false');
+                    item.focus();
+                }
+            });
+        }
+    });
+});

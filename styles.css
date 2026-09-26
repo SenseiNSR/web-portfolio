@@ -1166,3 +1166,11 @@ ul {
 .project-preview .bg-2 i { color: #dfb364; }
 .project-preview .bg-3 i { color: #3b82f6; }
 .project-preview .bg-4 i { color: #10b981; }
+
+/* Ensure preview images fill the 16:9 container perfectly */
+.project-preview.gallery-item img.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

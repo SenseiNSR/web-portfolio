@@ -705,7 +705,7 @@ ul {
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 .portfolio-item:hover .portfolio-dropdown {
-    max-height: 500px;
+    max-height: 800px;
     opacity: 1;
 }
 .portfolio-item:hover {

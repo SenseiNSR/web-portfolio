@@ -1204,3 +1204,16 @@ ul {
     border-radius: 6px;
     object-fit: contain;
 }
+
+/* Center the last project card if there's an odd number of projects */
+.portfolio-grid-new > .project-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 15px); /* Perfectly matches the width of a single column */
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid-new > .project-card:last-child:nth-child(odd) {
+        width: 100%;
+    }
+}
